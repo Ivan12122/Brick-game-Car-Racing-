@@ -37,6 +37,7 @@ export default class View {
     //отрисовать закрашеный блок
     createActivBlock(x, y) {
         this.context.lineWidth = 4;
+        this.context.strokeStyle = 'rgba(0, 0, 0, 1)'
         this.context.strokeRect(x * this.blockWidth, y * this.blockHeight, this.blockWidth, this.blockHeight)
 
         this.context.fillStyle = 'rgb(153, 168, 130)';
@@ -48,7 +49,7 @@ export default class View {
 
     //отрисовать не закрашеный блок
     createInactiveBlock(x, y) {
-        this.context.lineWidth = 4;
+        this.context.strokeStyle = 'rgba(0, 0, 0, 0.2)'
         this.context.strokeRect(x * this.blockWidth, y * this.blockHeight, this.blockWidth, this.blockHeight)
 
         this.context.fillStyle = 'rgba(125, 155, 143, 0.2)';

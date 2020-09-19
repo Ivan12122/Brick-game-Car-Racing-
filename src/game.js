@@ -1,6 +1,6 @@
 export default class Game {
     score = 0;
-    hiScore = localStorage.getItem('hiScore') || 0;
+    hiScore = +localStorage.getItem('hiScore') || 0;
     speedGame = 0;
     goal = 0;
     lives = 4;
