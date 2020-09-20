@@ -85,7 +85,7 @@ export default class Game {
                 speedGame: this.speedGame,
                 goal: this.goal,
                 lives: this.lives,
-                losing: this.losing
+                losing: this.losing,
             }
         }
 
@@ -118,13 +118,8 @@ export default class Game {
             hiScote: this.hiScore,
             speedGame: this.speedGame,
             goal: this.goal,
-            lives: this.lives
+            lives: this.lives,
         };
-    }
-
-    // сетeр скорости
-    getSpeed() {
-        return this.speed
     }
 
     // создание пустого массива -10 на -22

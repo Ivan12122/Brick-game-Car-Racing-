@@ -81,16 +81,16 @@ export default class View {
         this.context.font = "28px Verdana"
         //Score
         this.context.fillText('Score', 460, 50)
-        this.context.fillText(score, 470, 80)
+        this.context.fillText(score, 490 - score.toString().length * 7, 85)
         //Hi-Score
         this.context.fillText('Hi-Score', 440, 130)
-        this.context.fillText(hiScote, 470, 165);
+        this.context.fillText(hiScote, 490 - hiScote.toString().length * 7, 170);
         //speedGame
         this.context.fillText('Speed', 460, 450)
         this.context.fillText(speedGame, 490, 485);
         //goal
         this.context.fillText('Goal', 470, 560)
-        this.context.fillText(goal + '/50', 470, 600);
+        this.context.fillText(goal + '/50', 480 - goal.toString().length * 7, 600);
         //lives
         for (let x = 10; x < 15; x++) {
             for (let y = 5; y < 9; y++) {
@@ -110,8 +110,8 @@ export default class View {
     }
 
     // текст возобновить игру клавишей Enter 
-    losingGame(losing,lives){
-        if(lives == 0 && losing && this.picer){
+    losingGame(losing, lives) {
+        if (lives == 0 && losing && this.picer) {
             this.context.font = "bold 40px Verdana"
             this.context.fillStyle = 'rgb(0, 0, 0)';
             this.context.fillText('GAME OVER', 65, 390)
@@ -120,12 +120,12 @@ export default class View {
             this.context.fillText('click the Enter to continue', 45, 420)
             return
         }
-        if (losing && this.picer){
+        if (losing && this.picer) {
             this.context.font = "bold 21px Verdana"
             this.context.fillStyle = 'rgb(0, 0, 0)';
             this.context.fillText('click the Enter to continue', 45, 390)
         }
-        
+
     }
 
     // отчистить поле

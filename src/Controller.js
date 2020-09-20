@@ -11,7 +11,7 @@ export default class Controller {
             this.game.moveBedCarDown();
             this.view.render(this.game.getState());
             this.GG()
-        }, this.game.getSpeed())
+        }, this.game.speed)
     }
 
 }
